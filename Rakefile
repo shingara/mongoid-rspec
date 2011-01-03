@@ -10,7 +10,6 @@ begin
     gem.email = "evansagge@gmail.com"
     gem.homepage = "http://github.com/evansagge/mongoid-rspec"
     gem.authors = ["Evan Sagge"]
-    gem.add_dependency "mongoid"
     gem.add_dependency "rspec", "~> 2"
   end
   Jeweler::GemcutterTasks.new
@@ -31,8 +30,6 @@ RSpec::Core::RakeTask.new(:rcov) do |spec|
   spec.pattern = "./spec/**/*_spec.rb"
   spec.rcov = true
 end
-
-task :spec => :check_dependencies
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
